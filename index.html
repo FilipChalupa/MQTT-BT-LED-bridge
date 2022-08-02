@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>MQTT BT LED bridge</title>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js"
+			defer
+		></script>
+		<script src="script.js" type="module"></script>
+		<style>
+			body {
+				font-size: 3em;
+			}
+			button {
+				font-size: inherit;
+			}
+			.light {
+				margin: 0.5em 0;
+				display: flex;
+				align-items: center;
+				column-gap: 0.5em;
+			}
+			.color {
+				position: relative;
+				display: inline-block;
+				width: 2em;
+				aspect-ratio: 1 / 1;
+				box-shadow: 0 0 0.3rem #000000;
+				background-color: var(--base);
+			}
+			.status {
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="light">
+			<div class="color"></div>
+			<button type="button">Connect</button>
+			<div class="status">❌</div>
+		</div>
+		<div class="light">
+			<div class="color"></div>
+			<button type="button">Connect</button>
+			<div class="status">❌</div>
+		</div>
+	</body>
+</html>
